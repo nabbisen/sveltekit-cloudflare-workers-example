@@ -1,4 +1,7 @@
 {
-  "svelte.enable-ts-plugin": true,
-  "editor.formatOnSave": true
+	"svelte.enable-ts-plugin": true,
+	"editor.formatOnSave": true,
+	"files.associations": {
+		"wrangler.json": "jsonc"
+	}
 }

@@ -1,38 +1,30 @@
-# sv
+# SvelteKit + CloudFlare Workers example
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## A `wrangler` skeleton project
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+### Install `wrangler`
 
 ```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+bun install -D wrangler@latest
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Create a project
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# in an empty directory
+bunx wrangler init ./ -y
 ```
 
-## Building
-
-To create a production version of your app:
+Test it:
 
 ```sh
-npm run build
+bunx wrangler dev
 ```
 
-You can preview the production build with `npm run preview`.
+## A `wrangler` project where SvelteKit is integrated into
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+### Create a project
+
+```sh
+bun create cloudflare@latest myproject --framework=svelte
+```
